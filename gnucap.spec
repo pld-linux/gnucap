@@ -3,11 +3,13 @@ Summary(pl.UTF-8):	Gnucap - analizatorem obwodów elektronicznych GNU
 Name:		gnucap
 Version:	0.35
 Release:	0.9
-License:	GPL
-Group:		Applications
+License:	GPL v2+
+Group:		Applications/Science
 Source0:	http://www.geda.seul.org/dist/%{name}-%{version}.tar.gz
 # Source0-md5:	16fc7cacac987ea556753d030f2595b9
 URL:		http://www.gnu.org/software/gnucap/
+BuildRequires:	libstdc++-devel
+BuildRequires:	readline-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -27,7 +29,8 @@ wydaniu załączone są kompatybilne ze Spice modele układów MOSFET
 %setup -q
 
 %build
-%configure
+%configure \
+	ac_cv_lib_termcap_main=no
 %{__make}
 
 %install
@@ -42,5 +45,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/gnucap*
 %{_datadir}/%{name}
+%{_mandir}/man1/gnucap.1*
