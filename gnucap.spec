@@ -1,5 +1,5 @@
-Summary:	Gnucap is the Gnu Circuit Analysis Package
-Summary(pl.UTF-8):	Gnucap jest Analizatorem obwodów GNU
+Summary:	Gnucap - the GNU Circuit Analysis Package
+Summary(pl.UTF-8):	Gnucap - analizatorem obwodów elektronicznych GNU
 Name:		gnucap
 Version:	0.35
 Release:	0.9
@@ -12,15 +12,16 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The primary component is a general purpose circuit simulator. It
-performs nonlinear dc and transient analyses, fourier analysis, and ac
+performs nonlinear DC and transient analyses, Fourier analysis, and AC
 analysis. Spice compatible models for the MOSFET (level 1-8), BJT, and
 diode are included in this release.
 
 %description -l pl.UTF-8
-The primary component is a general purpose circuit simulator. It
-performs nonlinear dc and transient analyses, fourier analysis, and ac
-analysis. Spice compatible models for the MOSFET (level 1-8), BJT, and
-diode are included in this release.
+Główny element to symulator obwodów elektronicznych ogólnego
+przeznaczenia. Przeprowadza nieliniową analizę prądu stałego i
+wygasania, analizę Fouriera oraz analizę prądu zmiennego. W tym
+wydaniu załączone są kompatybilne ze Spice modele układów MOSFET
+(poziomu 1-8), BJT i diod.
 
 %prep
 %setup -q
